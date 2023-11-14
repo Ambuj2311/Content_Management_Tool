@@ -1,0 +1,20 @@
+{%  extends 'Base.html' %}
+
+{% block content %}
+<div class="row">
+<div class="col-sm-4"></div>
+<div class="col-sm-4">
+
+   <br> <h4 class=" alert alert-danger"> Update Your Content </h4>
+    <form action=" " method="POST" novalidate enctype="multipart/form-data" class="shadow p-5">
+    
+        {{ form.as_p}}
+        <input type="Submit" class="btn btn-success" value="Update">
+        <a href="{% url 'signup' %}" class="btn btn-success" > Home </a>
+    
+         {% csrf_token %}
+    </form>
+    </div>
+    <div class="col-sm-4"></div>
+    </div>
+    {% endblock content %}
